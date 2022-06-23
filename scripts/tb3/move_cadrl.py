@@ -209,7 +209,7 @@ def run():
     actions = a.actions
     num_actions = a.num_actions
     nn = network.NetworkVP_rnn(network.Config.DEVICE, 'network', num_actions)
-    nn.simple_load(rospack.get_path('cadrl_ros')+'/checkpoints/network_01900000')
+    nn.simple_load(rospack.get_path('cadrl-ros')+'/checkpoints/network_01900000')
 
     rospy.init_node('cadrl_tb3')
     tb3_nav = NN_tb3(nn,actions)
