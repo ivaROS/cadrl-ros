@@ -488,9 +488,9 @@ def run():
                    '/checkpoints/network_01900000')
 
     rospy.init_node('nn_tb3', anonymous=False)
-    veh_name = rospy.get_param('/model')
-    pref_speed = rospy.get_param("/speed")
-    radius = rospy.get_param("/radius")
+    veh_name = rospy.get_param('/robot_model')
+    pref_speed = rospy.get_param("/actions/continuous/linear_range")[1]
+    radius = rospy.get_param("/robot_radius")
     veh_data = {'goal': np.zeros(
         (2,)), 'radius': radius, 'pref_speed': pref_speed, 'kw': 10.0, 'kp': 1.0, 'name': veh_name}
 
