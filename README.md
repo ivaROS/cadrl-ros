@@ -54,10 +54,15 @@ pip install pyyaml catkin_pkg gym netifaces pathlib filelock pyqt5 mpi4py lxml s
 ```
 
 ## Usage
-Remember to activate the python3.6 virtual environment, before launching arena-rosnav.  
+Remember to activate the python3.6 virtual environment, before launching arena-bench.  
 If you followed the installation guide, you can do that by typing:
 ```bash
 workon cadrl
 ```
+## This planner can be chosen using the local_planner argument like so:
+```bash
+roslaunch arena_bringup start_arena.launch local_planner:=cadrl # Make sure that your virtual env/poetry is activated
+```
+## For more details regarding usage, please refer to our [documentation](https://arena-benchmark.readthedocs.io/en/latest/user_guides/usage/)
 ## Original work
 For more information about CADRL, please refer to the original publication [paper](https://arxiv.org/abs/1805.01956)
