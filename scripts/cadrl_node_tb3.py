@@ -122,6 +122,8 @@ class NN_tb3():
             rospy.Duration(0.1), self.cbComputeActionGA3C)
 
     def cbGlobalGoal(self, msg):
+        if msg.pose == self.global_goal.pose:
+            return
         self.stop_moving_flag = True
         self.new_global_goal_received = True
         self.global_goal = msg
