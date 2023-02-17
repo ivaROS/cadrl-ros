@@ -63,6 +63,6 @@ workon cadrl
 ```bash
 roslaunch arena_bringup start_arena.launch local_planner:=cadrl # Make sure that your virtual env/poetry is activated
 ```
-## For more details regarding usage, please refer to our [documentation](https://arena-benchmark.readthedocs.io/en/latest/user_guides/usage/)
+## For more details regarding usage, please refer to our [documentation](https://arena-rosnav.readthedocs.io/en/latest/user_guides/usage/)
 ## Original work
 For more information about CADRL, please refer to the original publication [paper](https://arxiv.org/abs/1805.01956)
