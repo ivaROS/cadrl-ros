@@ -256,6 +256,10 @@ class NN_tb3():
             twist = Twist()
             twist.angular.z = vw
             twist.linear.x = vx
+
+
+            print('twist: ', twist)
+
             self.pub_twist.publish(twist)
             self.visualize_action(use_d_min)
             return
@@ -490,9 +494,9 @@ def run():
                    '/checkpoints/network_01900000')
 
     rospy.init_node('nn_tb3', anonymous=True)
-    veh_name = rospy.get_param("robot_model")
-    pref_speed = rospy.get_param("actions/continuous/linear_range")[1]
-    radius = rospy.get_param("robot_radius")
+    veh_name = "rto" # rospy.get_param("robot_model")
+    pref_speed = 1.0 # rospy.get_param("actions/continuous/linear_range")[1]
+    radius = 0.25 # rospy.get_param("robot_radius")
     veh_data = {'goal': np.zeros(
         (2,)), 'radius': radius, 'pref_speed': pref_speed, 'kw': 10.0, 'kp': 1.0, 'name': veh_name}
 
