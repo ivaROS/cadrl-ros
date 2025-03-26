@@ -258,7 +258,7 @@ class NN_tb3():
             twist.linear.x = vx
 
 
-            print('twist: ', twist)
+            # print('twist: ', twist)
 
             self.pub_twist.publish(twist)
             self.visualize_action(use_d_min)
